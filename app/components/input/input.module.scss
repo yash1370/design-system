@@ -1,0 +1,18 @@
+@import "../../styles/variable.scss";
+
+.input {
+  border: 1px solid $grey-200;
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $grey-800;
+  border-radius: 4px;
+  outline: none;
+
+  &::placeholder {
+    color: $grey-300;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

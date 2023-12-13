@@ -11365,6 +11365,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-content-loader@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "react-content-loader@npm:6.2.1"
+  peerDependencies:
+    react: ">=16.0.0"
+  checksum: 65968a9ec46cffdc7017c0aa68f6b4f5770c1c6e1677d0eb70f7c553a6a3b9385e8bcae570152e6a006812c81a575dce401c07192b3ac49c64654c4b0cce0d80
+  languageName: node
+  linkType: hard
+
 "react-docgen-typescript@npm:^2.2.2":
   version: 2.2.2
   resolution: "react-docgen-typescript@npm:2.2.2"
@@ -12458,6 +12467,7 @@ __metadata:
     next: "npm:14.0.4"
     postcss: "npm:^8"
     react: "npm:^18"
+    react-content-loader: "npm:^6.2.1"
     react-dom: "npm:^18"
     sass: "npm:^1.69.5"
     storybook: "npm:7.6.4"
