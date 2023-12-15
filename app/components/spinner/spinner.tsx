@@ -10,7 +10,7 @@ interface SpinnerProps {
 const Spinner = ({ className, Color, size, ...props }: SpinnerProps) => {
   return (
     <div
-      className={`${className} ${spinnerStyles.spinner}`}
+      className={`${className} spinner`}
       {...props}
       style={{
         borderTop: `2px solid ${Color}`,

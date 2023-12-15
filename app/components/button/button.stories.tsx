@@ -1,6 +1,5 @@
 import { Meta } from "@storybook/react";
 import { Button } from "./button";
-import buttonStyles from "./button.module.scss";
 
 const meta = {
   title: "Components/Button",
@@ -26,7 +25,7 @@ Example.args = {
 };
 
 export const Variants = () => (
-  <div className={buttonStyles.storyContainer}>
+  <div className="flex items-center flex-wrap gap-4 mb-8">
     <Button variant="primary">Primary</Button>
     <Button variant="secondary">Secondary</Button>
     <Button variant="danger">Danger</Button>
@@ -35,7 +34,7 @@ export const Variants = () => (
 );
 
 export const Disable = () => (
-  <div className={buttonStyles.storyContainer}>
+  <div className="flex items-center flex-wrap gap-4 mb-8">
     <Button variant="primary" disabled={true}>
       Primary
     </Button>
@@ -52,7 +51,7 @@ export const Disable = () => (
 );
 
 export const Loading = () => (
-  <div className={buttonStyles.storyContainer}>
+  <div className="flex items-center flex-wrap gap-4 mb-8">
     <Button variant="primary" isLoading={true}>
       Primary
     </Button>
@@ -69,7 +68,7 @@ export const Loading = () => (
 );
 
 export const FullWidth = () => (
-  <div className={buttonStyles.storyContainer}>
+  <div className="flex items-center flex-wrap gap-4 mb-8">
     <Button variant="primary" isFullWidth={true}>
       Primary
     </Button>
@@ -86,7 +85,7 @@ export const FullWidth = () => (
 );
 
 export const Size = () => (
-  <div className={buttonStyles.storyContainer}>
+  <div className="flex items-center flex-wrap gap-4 mb-8">
     <Button variant="primary" size="small">
       small
     </Button>

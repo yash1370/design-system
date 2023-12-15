@@ -1,5 +1,4 @@
 import React from "react";
-import buttonStyles from "./button.module.scss";
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "danger" | "ghost";
@@ -27,31 +26,31 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={`${buttonStyles.button} ${className} ${
+      className={`button ${className} ${
         variant === "primary"
-          ? buttonStyles.primary
+          ? "btn-primary"
           : variant === "secondary"
-          ? buttonStyles.secondary
+          ? "btn-secondary"
           : variant === "danger"
-          ? buttonStyles.danger
+          ? "btn-danger"
           : variant === "ghost"
-          ? buttonStyles.ghost
+          ? "btn-ghost"
           : ""
       } ${
         size === "small"
-          ? buttonStyles.smallBtn
+          ? "btn-small"
           : size === "medium"
-          ? buttonStyles.mediumBtn
+          ? "btn-medium"
           : size === "large"
-          ? buttonStyles.largeBtn
+          ? "btn-large"
           : ""
-      } ${isFullWidth === true && buttonStyles.fullWidthBtn}`}
+      } ${isFullWidth === true && "fullWidthBtn"}`}
       disabled={disabled || isLoading}
       {...props}
     >
       {isLoading ? (
         <>
-          <div className={buttonStyles.shdLoader}>
+          <div className="btn-loader">
             <div></div>
             <div></div>
             <div></div>
