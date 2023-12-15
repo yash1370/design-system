@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import inputStyles from "./input.module.scss";
 import VisibleEyeIcon from "../theme/icons/visibleEyeIcon";
 import InvisibleEyeIcon from "../theme/icons/invisibleEyeIcon";
 
@@ -21,8 +20,8 @@ const Input = ({
 }: InputProps) => {
   const [show, setShow] = useState(false);
   return (
-    <div className="relative">
-      <div className="grid gap-2">
+    <div className="input-container">
+      <div className="input-box">
         <label htmlFor="" className="text-grey-500 text-xs font-semibold">
           {label}
         </label>
@@ -31,16 +30,16 @@ const Input = ({
           placeholder={placeholder}
           disabled={disabled}
           {...props}
-          className={`${inputStyles.input} ${className}`}
+          className={`input-border ${className}`}
         />
       </div>
       {variant === "password" && (
-        <div className="absolute right-2.5 top-[33px]">
+        <div className="password-type">
           <span onClick={() => setShow(!show)}>
             {show ? (
-              <InvisibleEyeIcon className="text-grey-400 cursor-pointer" />
+              <InvisibleEyeIcon className="eyeIcon" />
             ) : (
-              <VisibleEyeIcon className="text-grey-400 cursor-pointer" />
+              <VisibleEyeIcon className="eyeIcon" />
             )}
           </span>
         </div>

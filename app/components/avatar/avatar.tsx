@@ -1,11 +1,15 @@
 import React from "react";
-import AvatarStyles from "./avatar.module.scss";
+import Image from "next/image";
 
 interface AvatarProps {
   className?: string;
   firstName?: string;
   lastName?: string;
   src?: string;
+  Alt?: string;
+  title?: string;
+  width?: number;
+  height?: number;
   size?: "sm" | "md" | "lg";
 }
 
@@ -13,8 +17,12 @@ const Avatar = ({
   firstName,
   className,
   lastName,
+  Alt,
   size = "sm",
   src,
+  height,
+  width,
+  title,
   ...props
 }: AvatarProps) => {
   let initials = "";
@@ -28,30 +36,27 @@ const Avatar = ({
   return (
     <>
       {src ? (
-        <div>
-          <img
+        <>
+          <Image
             {...props}
             src={src}
-            className={`${AvatarStyles.avatarImg} ${
-              size === "sm"
-                ? AvatarStyles.sm
-                : size === "md"
-                ? AvatarStyles.md
-                : size === "lg"
-                ? AvatarStyles.lg
-                : ""
-            } ${className}`}
+            width={width}
+            height={height}
+            alt={`${Alt}`}
+            title={title}
+            className={className}
           />
-        </div>
+        </>
       ) : (
         <div
-          className={`${AvatarStyles.avatar} ${
+          title={`${firstName} ${lastName}`}
+          className={`avatar ${
             size === "sm"
-              ? AvatarStyles.sm
+              ? "small"
               : size === "md"
-              ? AvatarStyles.md
+              ? "medium"
               : size === "lg"
-              ? AvatarStyles.lg
+              ? "large"
               : ""
           } ${className}`}
           {...props}

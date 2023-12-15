@@ -1,6 +1,4 @@
 import React from "react";
-import textareaStyles from "./textarea.module.scss";
-
 interface TextareaProps {
   label: string;
   className?: string;
@@ -16,15 +14,15 @@ const Textarea = ({
   ...props
 }: TextareaProps) => {
   return (
-    <div className="grid gap-2">
-      <label htmlFor="" className="text-grey-500 text-xs font-semibold">
+    <div className="textarea-container">
+      <label htmlFor="" className="input-label">
         {label}
       </label>
       <textarea
         placeholder={placeholder}
         disabled={disabled}
         {...props}
-        className={`${textareaStyles.textarea} ${className}`}
+        className={`textarea ${className}`}
       />
     </div>
   );

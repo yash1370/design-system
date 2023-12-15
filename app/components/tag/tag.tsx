@@ -10,12 +10,12 @@ interface TagProps {
 const Tag = ({ tag, className, Color, bgColor, ...props }: TagProps) => {
   return (
     <div
-      className={`${className} flex items-center justify-center py-1 px-2 rounded-full`}
+      className={`${className} tag-container`}
       {...props}
       style={{ background: bgColor }}
     >
       <span
-        className="text-xs font-normal"
+        className="tag-text"
         style={{
           color: Color,
         }}
