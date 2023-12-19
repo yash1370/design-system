@@ -13,8 +13,10 @@ export default function RootLayout({
     <html lang="en">
       <Head />
       <body className={inter.className} suppressHydrationWarning={true}>
-        <div className="container h-screen mx-auto px-6 lg:px-10 2xl:px-32">
-          {children}
+        <div className="home">
+          <div className="container h-screen mx-auto px-6 lg:px-10 2xl:px-32">
+            {children}
+          </div>
         </div>
       </body>
     </html>

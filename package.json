@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "design-system",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,6 +23,7 @@
     "@storybook/addon-interactions": "7.6.4",
     "@storybook/addon-links": "7.6.4",
     "@storybook/addon-onboarding": "1.0.9",
+    "@storybook/addons": "^6.5.14",
     "@storybook/blocks": "7.6.4",
     "@storybook/nextjs": "7.6.4",
     "@storybook/react": "7.6.4",
